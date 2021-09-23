@@ -4,7 +4,9 @@ module.exports = function(stage, input) {
   const { width, height } = input.container;
   let changedWidth = width + 20;
   stage.setWidth(changedWidth);
-  stage.height(height);
+  stage.height(height + 4);
+  stage.offsetY(-2);
+  stage.offsetX(-2);
   const layer = new Konva.Layer();
   const Text = function(x, y, width, height, label, style) {
     const opt = Object.assign({}, style, { text: label, width, x, y });
